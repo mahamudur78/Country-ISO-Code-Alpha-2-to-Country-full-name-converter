@@ -1,0 +1,67 @@
+.mb-10 {
+    margin-bottom: 10px;
+}
+.output-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.output-box {
+    margin-top: 50px;
+}
+.output-menu-sort {
+    width: 279px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+}
+.output-menu-sort .form-size {
+    width: 220px;
+    margin-left: 5px;
+}
+.form-group {
+    margin-top: 45px;
+}
+.form-group label {
+    margin-bottom: 10px px;
+}
+
+.notfound {
+    color: #dc573a;
+}
+
+.pagination-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pagination {
+    margin: 0;
+}
+.pagination-section div {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.pagination-number-size {
+    width: 120px;
+}
+.page-link {
+    cursor: pointer;
+}
+p#pag-total {
+    margin-bottom: 0;
+    margin-right: 5px;
+    width: 80px;
+}
+
+.notfound {
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
+
+.btn.btn-success {
+    /* float: right; */
+    margin-top: 5px;
+}

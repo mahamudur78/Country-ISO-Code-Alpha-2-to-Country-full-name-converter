@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Country ISO Code Alpha-2 to Country Full Name Converter</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+
+    <body>
+        <div class="container p-5 my-3">
+            <h2>Country ISO Code Alpha-2 to Country Full Name Converter</h2>
+            <p>Begin by creating a JavaScript dictionary that maps ISO alpha-2 codes to their corresponding country full names. You can add entries for the countries you need.</p>
+
+            <div class="form-group">
+                <label for="comment" class="mb-10">Country Code Input:</label>
+                <textarea name="inputbox" id="inputbox" onkeyup="myFunction(this)" placeholder="Input Country Code Example: US, BD, IN etc" class="form-control" rows="5"></textarea>
+            </div>
+
+            <div class="output-box">
+                <div class="output-menu">
+                    <div class="output-menu-title">
+                        <label id="output-count"><b>Output:</b></label>
+                    </div>
+
+                    <div class="output-box-search">
+                        <label id="output-notfound" onclick='window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })' class="notfound"></label>
+                    </div>
+
+                    <div class="output-menu-sort">
+                        <label for="comment">Sort By: </label>
+                        <select class="form-select form-size" onchange="myFunction(this)" id="country_count_sort" aria-label="Default select example">
+                            <option selected>Best Match</option>
+                            <option value="HighToLow">High To Low</option>
+                            <option value="LowToHigh">Low To High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="outputbox">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Country Code</th>
+                                <th>Country Name</th>
+                                <th>Country Count</th>
+                            </tr>
+                        </thead>
+                        <tbody id="output-table-data">
+                            <tr class="disabled">
+                                <td colspan="4">Data Not Found!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination-section">
+                        <div id="pagination-number">
+                            <p id="pag-total">Total</p>
+                            <select id="pagination-select-number" onchange="myFunction(this)" class="form-select form-select-sm pagination-number-size" aria-label=".form-select-sm example">
+                                <option value="10/page">10/page</option>
+                                <option value="20/page">20/page</option>
+                                <option value="30/page">30/page</option>
+                                <option value="40/page">40/page</option>
+                                <option value="50/page">50/page</option>
+                                <option value="60/page">60/page</option>
+                                <option value="70/page">70/page</option>
+                                <option value="80/page">80/page</option>
+                                <option value="90/page">90/page</option>
+                                <option value="100/page">100/page</option>
+                                <option value="110/page">110/page</option>
+                                <option value="120/page">120/page</option>
+                                <option value="130/page">130/page</option>
+                                <option value="140/page">140/page</option>
+                                <option value="150/page">150/page</option>
+                                <option value="160/page">160/page</option>
+                                <option value="170/page">170/page</option>
+                                <option value="180/page">180/page</option>
+                                <option value="190/page">190/page</option>
+                                <option value="200/page">200/page</option>
+                                <option value="10000">All/page</option>
+                            </select>
+                        </div>
+
+                        <nav aria-label="...">
+                            <ul id="pagination" class="pagination disabled">
+                                <!-- disabled -->
+                                <li id="previousbtn" onclick="myFunction(this)" class="page-item page-link">Previous</li>
+                                <li id="oneBtn" onclick="myFunction(this)" class="page-item page-link active">1</li>
+                                <li id="twoBtn" onclick="myFunction(this)" class="page-item page-link">2</li>
+                                <li id="threeBtn" onclick="myFunction(this)" class="page-item page-link">3</li>
+                                <li id="nextBtn" onclick="myFunction(this)" class="page-item page-link">Next</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <label id="contary-not-found" onclick='window.scrollTo({ left: 0, top: document.body.scrollTop, behavior: "smooth" })' class="notfound"></label>
+                </div>
+            </div>
+
+            <div class="export-section">
+                <h3>Export CSV</h3>
+                <p id="export-csv-description">If you need to download a CSV file, Please input the country code first.</p>
+                <button id="exportcsv" onclick="exportCSV()" class="btn btn-success export-csv disabled" type="submit">Export CSV</button>
+            </div>
+
+            <footer class="footer-style"></footer>
+        </div>
+
+        <!-- dfhgjdsfhv aiu ad difu -->
+        <!-- <input type="text" name="searchBar" id="searchBar" />
+        <ul id="results"></ul> -->
+
+        <!-- <script src="test.js"></script> -->
+        <script src="main.js"></script>
+    </body>
+</html>
